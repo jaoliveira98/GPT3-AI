@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Sparkles, CameraShake } from "@react-three/drei";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, Sparkles, CameraShake } from "@react-three/drei";
 
 function Model(props) {
   const { nodes, materials } = useGLTF("/robot.gltf");
@@ -47,7 +46,6 @@ export default function Robot() {
         rollFrequency={0.2}
         yawFrequency={0.2}
       />
-
       <directionalLight position={[-2, 5, 2]} intensity={5} color="#ae67fa" />
       <directionalLight position={[5, 5, 2]} intensity={5} color="#000" />
 
