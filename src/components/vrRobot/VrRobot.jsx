@@ -90,10 +90,7 @@ useGLTF.preload("/vrRobot.gltf");
 
 export default function VrRobot() {
   return (
-    <Canvas
-      camera={{ fov: 50, near: 0.1, far: 20, position: [0, 0, 0.9] }}
-      powerPreference="high-performance"
-    >
+    <Canvas camera={{ fov: 50, near: 0.1, far: 20, position: [0, 0, 0.9] }}>
       <ambientLight intensity={0.3} />
       <OrbitControls />
       <directionalLight position={[-2, 5, 2]} intensity={5} color="#ae67fa" />
