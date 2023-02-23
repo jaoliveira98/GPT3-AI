@@ -1,6 +1,10 @@
-# About this project
+# About
 
 This is a website promoting an AI using React.js, Three.js, React-three/fiber and React-three/drei. It features 3D models and interections, React functional components and their reusability, as well as organized file and folder structure. I used the fundamentals of the CSS BEM model. I added soft and pleasant animations to complex gradients for a visually pleasing experience. I also ensured that the website is adaptive.
+
+# Link to the website
+
+https://gpt-3-pearl.vercel.app/
 
 ## Available Scripts
 
