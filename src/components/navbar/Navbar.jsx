@@ -1,41 +1,37 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import logo from "../../assets/logo.svg";
 
-function Menu() {
-  return (
-    <>
-      <p>
-        <a href="#home">Home</a>
-      </p>
-      <p>
-        <a href="#wgpt3">What is GPT3</a>
-      </p>
-      <p>
-        <a href="#possibility">Open AI</a>
-      </p>
-      <p>
-        <a href="#features">Case Studies</a>
-      </p>
-      <p>
-        <a href="#blog">Library</a>
-      </p>
-    </>
-  );
-}
+const Menu = () => (
+  <>
+    <p>
+      <a href="#home">Home</a>
+    </p>
+    <p>
+      <a href="#wgpt3">What is GPT3</a>
+    </p>
+    <p>
+      <a href="#possibility">Open AI</a>
+    </p>
+    <p>
+      <a href="#features">Case Studies</a>
+    </p>
+    <p>
+      <a href="#blog">Library</a>
+    </p>
+  </>
+);
 
-function Authentication() {
-  return (
-    <>
-      <p>Sign in</p>
-      <button type="button">Sign up</button>
-    </>
-  );
-}
+const Authentication = () => (
+  <>
+    <p>Sign in</p>
+    <button type="button">Sign up</button>
+  </>
+);
 
 function Navbar() {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="gpt3__navbar">
@@ -51,20 +47,16 @@ function Navbar() {
         <Authentication />
       </div>
       <div className="gpt3__navbar-menu">
-        {toggleMenu ? (
+        {isOpen ? (
           <RiCloseLine
             color="#fff"
             size={27}
-            onClick={() => setToggleMenu(false)}
+            onClick={() => setIsOpen(false)}
           />
         ) : (
-          <RiMenu3Line
-            color="#fff"
-            size={27}
-            onClick={() => setToggleMenu(true)}
-          />
+          <RiMenu3Line color="#fff" size={27} onClick={() => setIsOpen(true)} />
         )}
-        {toggleMenu && (
+        {isOpen && (
           <div className="gpt3__navbar-menu_container scale-up-center">
             <div className="gpt3__navbar-menu_container-links">
               <Menu />
