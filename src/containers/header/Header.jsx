@@ -12,8 +12,8 @@ function Header() {
         </h1>
         <p>
           Whether you're looking for information on a specific topic, need help
-          with a task, or just want to chat with a friendly AI, NexusAI is here
-          to help.
+          with a task, or just want to chat with a friendly AI, GPT3 is here to
+          help.
         </p>
         <form className="gpt3__header-content__input">
           <input type="email" placeholder="Your Email Address" />
